@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "b618cc99-1f04-4d2f-b1c0-d14bf378e2bf",
+		"name": "microserviceProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35954567"
+	},
+	"item": [
+		{
+			"name": "register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test_middleware",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbggggGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiODVmMDljOWZkYmYxNWQyOWVlNDY0NjI5YTNkYjNlOGViNDg4YTdhZjUwNWI5MTM2MGRlYmIzNmFjZmNjYmFlOGJhMTBhYjFiZTYwYzUwZDIiLCJpYXQiOjE3Mjc2NTk4MzUuMjc5MDQ2LCJuYmYiOjE3Mjc2NTk4MzUuMjc5MDQ5LCJleHAiOjE3NTkxOTU4MzUuMTMzNzA0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.SXBTp9wKeWbzeBXCzTrYhfUvtk-2FN5v8wdgXQWEhCuJTzf0OnxMMoxVJJE_ru1WRVFmFNvqWK3mUe8qwske4lkb58nPjPiew7Kx6FFlvkN77ykeN2-aK4g05y-dgZX70ESApWLR_83Bzp6Ljzou-QtphdOJjLU8gz2BBlJpsDOG2-69JsPX1fH8EuibsCb6l8FaSjBYHc9zBboVcDJuQKzRyi23hGCOTM6O7vQeajuW106dQwjOdcq0VzFyQbtTjR5OUySyxctUOVhAm8uQvCHwpG9f2Ysv6s5gRJMMNmdJw-wDV2NU-vngFYp9Bq-znGHI2N482nXAXQNt1NiPiB-C9wQJoLPzs7DZL12lxPf_cnuhc5T5vHJ9caiuFAXPocwg3JjuHZGGg1_hkouzbhi2jX86IvoVcDuGJ_M2ejtu6zXg_NxUBA4UCg5enSfydrWXL0KTS5eCG2jDr9-JrTlVjMVXHGJdAF13tCIyEJf-WwIPq9GxBPK7RjAnGpPrs7Phxu_aEYWjoDod1HPlVbsEV_lHRpg31q71OHR3d7IUjpt7lkxD8lO65ow-Mnf1i9ambD3egEqJcEfrPASmg5LfEbD0Ez8_aS5TFA0DcqHvvdKt0QuqHVEHAtdEGJT2U1qkGg8JxPqRb-AX-BaPIpC0UGplkmAC6y89_T2RyCE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/test",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
